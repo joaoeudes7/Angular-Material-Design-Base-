@@ -1,0 +1,42 @@
+<!-- <mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar>
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/angular-logo.svg">
+    </div>
+    <mat-card-title>Churupita</mat-card-title>
+    <mat-card-subtitle>Teste</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="http://i.dailymail.co.uk/i/pix/2016/04/13/00/331D901800000578-3536787-image-a-11_1460503122350.jpg">
+  <mat-card-content>
+    <p>The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that
+      copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="">
+      <span> Curtir</span>
+    </button>
+    <button mat-raised-button color="">
+      <span> Compartilhar</span>
+    </button>
+  </mat-card-actions>
+</mat-card> -->
+<mat-card>
+  <form class="center" [formGroup]="options">
+    <!-- <mat-grid-list cols="2" rowHeight="1:1"> -->
+      <!-- <mat-grid-tile> -->
+        <mat-form-field>
+          <input matInput type="number" placeholder="Valor mínimo" [(ngModel)]="min" formControlName="min" min="0">
+          <mat-error *ngIf="options.get('min')?.invalid">O número deve ser maior que 0</mat-error>
+        </mat-form-field>
+      <!-- </mat-grid-tile>
+      <mat-grid-tile> -->
+        <mat-form-field>
+          <input matInput type="number" placeholder="Valor máximo" [(ngModel)]="max" formControlName="max" min="2" max="99999">
+          <mat-error *ngIf="options.get('max')?.invalid">O número deve ser maior que 1 e menor que 99999</mat-error>
+        </mat-form-field>
+      <!-- </mat-grid-tile>
+    </mat-grid-list> -->
+      <div class="zoom">{{num}}</div>
+      <button mat-raised-button color="primary" (click)="random()">Sortear Já!</button>
+  </form>
+</mat-card>
