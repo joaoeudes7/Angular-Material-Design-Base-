@@ -2,9 +2,11 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: `<app-header></app-header>
-             <router-outlet></router-outlet>
-             <app-footer></app-footer>
-             `
+  templateUrl: './app.component.html'
 })
-export class AppComponent { }
+export class AppComponent {
+  itensNav = [
+    { icon: 'filter_9_plus', name: 'Números' },
+    { icon: 'text_format', name: 'Palavras' }
+  ];
+ }

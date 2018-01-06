@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {random} from 'lodash';
 
 @Component({
   selector: 'app-home',
@@ -16,20 +17,21 @@ export class HomeComponent {
   options: FormGroup;
 
   constructor(fb: FormBuilder) {
-    this.options = fb.group({
-      'min': [this.min, [Validators.min(0), Validators.required]],
-      'max': [this.max, [Validators.min(2), Validators.max(99999), Validators.required]],
-    });
 
     this.num = 0;
     this.min = 0;
     this.max = 50;
+
+    this.options = fb.group({
+      'min': [this.min, [Validators.required]],
+      'max': [this.max, [Validators.required]],
+    });
   }
 
 public random(): void {
-    alert('oi');
-    // this.num =  Math.floor(Math.random() * this.max) + this.min as number;
-    // this.historic.push(this.num);
-    alert('oi');
+    this.num = random(this.min, this.max);
+    this.historic.push(this.num);
+    this.historic = this.historic.slice();
   }
+
 }

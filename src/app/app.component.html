@@ -1,0 +1,25 @@
+<td-layout>
+  <td-navigation-drawer flex sidenavTitle="Sorteio Já!" name="Sorteio rápido e simples" email="joaoeudes7@gmail.com">
+    <mat-nav-list>
+      <a *ngFor="let item of itensNav" mat-list-item>
+        <mat-icon>{{item.icon}}</mat-icon>{{item.name}}</a>
+    </mat-nav-list>
+  </td-navigation-drawer>
+
+
+  <td-layout-nav toolbarTitle="Sorteio Já!" navigationRoute="/">
+    <button mat-icon-button td-menu-button tdLayoutToggle>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div td-toolbar-content layout="row" layout-align="start center" flex>
+      <span flex></span>
+      <a mat-icon-button matTooltip="Docs" matTooltipPosition="before" href="https://teradata.github.io/covalent/" target="_blank">
+        <mat-icon>more_vert</mat-icon>
+      </a>
+    </div>
+
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+
+  </td-layout-nav>
+</td-layout>

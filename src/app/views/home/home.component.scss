@@ -16,10 +16,18 @@
 }
 
 .zoom {
-  zoom: 700%;
-  margin: calc(8vh - 41px) 0;
+  zoom: 650%;
+  margin: 20px 0;
 }
 
 mat-form-field {
   margin-left: 5px;
+}
+
+.mat-card-title {
+  font-weight: 300;
+}
+
+.mat-card mat-card-content {
+  padding: 10px;
 }

@@ -1,4 +1,3 @@
-import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -9,10 +8,14 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { AppComponent } from './app.component';
 
 import { environment } from '../environments/environment';
-import { HeaderComponent } from './components/header/header.component';
 import { MatToolbarModule, MatIconModule, MatMenuModule, MatButtonModule } from '@angular/material';
-import { AppMaterialModule } from './app-material/app-material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+
+import { MaterialModule } from './modules/material.module';
+import { CovalentModule } from './modules/covalent.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
     // Basic Material
-    AppMaterialModule
+    MaterialModule,
+    CovalentModule
   ],
   providers: [],
   bootstrap: [AppComponent]
