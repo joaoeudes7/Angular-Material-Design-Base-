@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "sorteioja": {
+    "ngmaterialdesign": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -38,11 +38,11 @@
               "vendorChunk": false,
               "buildOptimizer": true,
               "serviceWorker": true,
-              "ngswConfigPath": "/src/ngsw-config.json",
+              "ngswConfigPath": "ngsw-config.json",
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "environments/environment.ts",
+                  "with": "environments/environment.prod.ts"
                 }
               ]
             }
@@ -51,18 +51,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "sorteioja:build"
+            "browserTarget": "ngmaterialdesign:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "sorteioja:build:production"
+              "browserTarget": "ngmaterialdesign:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "sorteioja:build"
+            "browserTarget": "ngmaterialdesign:build"
           }
         },
         "test": {
@@ -97,7 +97,7 @@
         }
       }
     },
-    "sorteioja-e2e": {
+    "ngmaterialdesign-e2e": {
       "root": "",
       "sourceRoot": "e2e",
       "projectType": "application",
@@ -106,7 +106,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "sorteioja:serve"
+            "devServerTarget": "ngmaterialdesign:serve"
           }
         },
         "lint": {
@@ -123,7 +123,7 @@
       }
     }
   },
-  "defaultProject": "sorteioja",
+  "defaultProject": "ngmaterialdesign",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",

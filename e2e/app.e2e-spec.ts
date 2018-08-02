@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('sorteioja App', () => {
+describe('ngmaterialdesign App', () => {
   let page: AppPage;
 
   beforeEach(() => {
