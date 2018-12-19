@@ -15,24 +15,10 @@ import { MatButtonModule, MatListModule, MatIconModule, MatCardModule, MatMenuMo
     MatCardModule,
     MatMenuModule,
     MatInputModule,
-    MatSelectModule,
-    MatButtonToggleModule,
-    MatSlideToggleModule,
-    MatProgressSpinnerModule,
-    MatDialogModule,
-    MatSnackBarModule,
     MatToolbarModule,
-    MatTabsModule,
     MatSidenavModule,
-    MatTooltipModule,
     MatRippleModule,
-    MatRadioModule,
     MatGridListModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatSliderModule,
-    MatAutocompleteModule,
-
   ]
 })
 export class MaterialModule { }

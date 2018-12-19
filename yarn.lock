@@ -2292,6 +2292,13 @@ escodegen@1.x.x:
   optionalDependencies:
     source-map "~0.5.6"
 
+eslint-plugin-you-dont-need-lodash-underscore@^6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-you-dont-need-lodash-underscore/-/eslint-plugin-you-dont-need-lodash-underscore-6.4.0.tgz#a7daaaadbc81e944995b70f54af37c1c11d1b1d1"
+  integrity sha512-uAcJ0MHaDc6CFccffwQeKB72oax9lIGSxNGOX6piBJOHaO3V7L3PAUzn4rTGR1L+Xe9AQ70vNzMUCfXH7hhRqw==
+  dependencies:
+    kebab-case "^1.0.0"
+
 eslint-scope@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-4.0.0.tgz#50bf3071e9338bcdc43331794a0cb533f0136172"
@@ -4064,6 +4071,11 @@ karma@~2.0.5:
     source-map "^0.6.1"
     tmp "0.0.33"
     useragent "2.2.1"
+
+kebab-case@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/kebab-case/-/kebab-case-1.0.0.tgz#3f9e4990adcad0c686c0e701f7645868f75f91eb"
+  integrity sha1-P55JkK3K0MaGwOcB92RYaPdfkes=
 
 killable@^1.0.0:
   version "1.0.0"

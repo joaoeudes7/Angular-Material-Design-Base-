@@ -1,0 +1,16 @@
+<mat-card>
+  <mat-card-title>Histórico</mat-card-title>
+  <mat-card-subtitle>Os números e palavras sorteadas ficaram aqui</mat-card-subtitle>
+  <mat-divider></mat-divider>
+  <mat-list style="max-height: 75vh; overflow: auto">
+    <mat-list-item *ngFor="let row of data; index as i">
+      <mat-icon matListAvatar>replay</mat-icon>
+      <h4 matLine>{{ row }}</h4>
+      <p matLine>{{ i + 1}}º valor sorteado </p>
+      <mat-divider *ngIf="i !== data.length-1" matInset></mat-divider>
+    </mat-list-item>
+    <mat-card-content>
+      <p *ngIf="data.length == 0">Sem itens no histórico</p>
+    </mat-card-content>
+  </mat-list>
+</mat-card>

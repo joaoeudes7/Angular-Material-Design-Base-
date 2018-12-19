@@ -1,91 +1,9 @@
-<!-- <mat-card class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar>
-      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/angular-logo.svg">
-    </div>
-    <mat-card-title>Churupita</mat-card-title>
-    <mat-card-subtitle>Teste</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="http://i.dailymail.co.uk/i/pix/2016/04/13/00/331D901800000578-3536787-image-a-11_1460503122350.jpg">
-  <mat-card-content>
-    <p>The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that
-      copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.</p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-raised-button color="">
-      <span> Curtir</span>
-    </button>
-    <button mat-raised-button color="">
-      <span> Compartilhar</span>
-    </button>
-  </mat-card-actions>
-</mat-card> -->
-<!-- <mat-card>
-  <form class="center" [formGroup]="options">
-    <div class="layout-column layout-gt-sm-row">
-        <mat-form-field>
-          <input matInput type="number" placeholder="Valor mínimo" [(ngModel)]="min" formControlName="min" min="0">
-          <mat-error *ngIf="options.get('min')?.invalid">O número deve ser maior que 0</mat-error>
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput type="number" placeholder="Valor máximo" [(ngModel)]="max" formControlName="max" min="2" max="99999">
-          <mat-error *ngIf="options.get('max')?.invalid">O número deve ser maior que 1 e menor que 99999</mat-error>
-        </mat-form-field>
-    </div>
-    <div class="zoom">{{num}}</div>
-      <button mat-raised-button color="primary" (click)="random()">Sortear Já!</button>
-  </form>
-</mat-card> -->
-
 <div layout-gt-sm="row" tdMediaToggle="gt-sm" [mediaClasses]="['push-sm']">
   <div flex-gt-sm="60">
-    <mat-card>
-      <mat-card-title>Sortear</mat-card-title>
-      <mat-card-subtitle>Modifique o tipo de sorteio e os valores</mat-card-subtitle>
-      <mat-divider></mat-divider>
-
-      <form class="center" [formGroup]="options" (submit)="random()">
-        <mat-card-content>
-          <div layout="row">
-
-            <mat-form-field flex-xs="50" flex-gt-sm="50">
-              <input matInput formControlName="min" placeholder="Min" [(ngModel)]="min" />
-            </mat-form-field>
-
-            <mat-form-field flex-xs="45" flex-gt-sm="50">
-              <input matInput formControlName="max" placeholder="Max" [(ngModel)]="max" />
-            </mat-form-field>
-          </div>
-          <p class="zoom">{{num}}</p>
-          <button type="submit" mat-raised-button color="primary" class="text-upper">
-              Sorteio Já!
-          </button>
-        </mat-card-content>
-      </form>
-
-    </mat-card>
+    <app-random #random></app-random>
   </div>
 
   <div flex-gt-sm="40">
-    <mat-card>
-      <mat-card-title>Histórico</mat-card-title>
-      <mat-card-subtitle>Os números e palavras sorteadas ficaram aqui</mat-card-subtitle>
-      <mat-divider></mat-divider>
-      <mat-card-content>
-        <mat-list>
-          <td-virtual-scroll-container [style.height.px]="400" [data]="historic">
-            <ng-template let-row="row" let-index="index" let-last="last" tdVirtualScrollRow>
-              <mat-list-item>
-                <mat-icon matListAvatar>replay</mat-icon>
-                <h4 matLine>{{row}}</h4>
-                <p matLine>{{index + 1}}º valor sorteado </p>
-              </mat-list-item>
-              <mat-divider *ngIf="!last" matInset></mat-divider>
-            </ng-template>
-          </td-virtual-scroll-container>
-        </mat-list>
-      </mat-card-content>
-
-    </mat-card>
+    <app-historic [data]="random.historic"></app-historic>
   </div>
 </div>

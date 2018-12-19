@@ -1,0 +1,22 @@
+<mat-card>
+  <mat-card-title>Sortear</mat-card-title>
+  <mat-card-subtitle>Modifique o tipo de sorteio e os valores</mat-card-subtitle>
+  <mat-divider></mat-divider>
+
+  <form [formGroup]="form" (submit)="randomNumber()">
+    <mat-card-content style="text-align: center">
+      <div layout="row" layout-align="center">
+        <mat-form-field flex-xs="50" flex-gt-sm="50">
+          <input matInput formControlName="min" placeholder="Min" type="number"/>
+        </mat-form-field>
+
+        <mat-form-field flex-xs="45" flex-gt-sm="50">
+          <input matInput formControlName="max" placeholder="Max" type="number" />
+        </mat-form-field>
+      </div>
+
+      <p class="zoom">{{ num }}</p>
+      <button type="submit" mat-raised-button color="primary" class="text-upper" [disabled]="!form.valid">Sorteio Já!</button>
+    </mat-card-content>
+  </form>
+</mat-card>
