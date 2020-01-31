@@ -987,10 +987,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@covalent/core@2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@covalent/core/-/core-2.0.2.tgz#9c4f401d341bf91636a58ff9b9b2e0d05c6e70d0"
-  integrity sha512-b7jni5F2j8EjMWm2JH2IJG8lyvxHo8sw6ZNAYfaMPz68ig2IRQn0dTCDZoLInxepAwYtHeP2M6JhOCK7Opcj0Q==
+"@covalent/core@2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@covalent/core/-/core-2.1.1.tgz#6fc63bb001fbf67d6b4ec2ef0658e6f89477dbb1"
+  integrity sha512-3qswAHp4nQhwI+zA2B5g7zxHe0b/EVvJBo9UF6ggevy03CmKOPs5wJFzEsKwCFBtArIGbwKwhpVNwfW5D2j0mA==
   dependencies:
     tslib "^1.9.0"
 
